@@ -1,5 +1,6 @@
 name 'workspace'
 depends 'pyenv'
+depends 'rbenv'
 depends 'users'
 depends 'vim'
 version '0.0.0'
