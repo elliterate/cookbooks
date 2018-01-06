@@ -1,4 +1,5 @@
 name 'workspace'
+depends 'bash-it'
 depends 'pyenv'
 depends 'rbenv'
 depends 'users'
