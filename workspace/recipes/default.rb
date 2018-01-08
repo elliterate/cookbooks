@@ -1,3 +1,7 @@
+if platform?('ubuntu')
+  include_recipe 'apt'
+end
+
 users_manage node['workspace']['user']
 
 include_recipe 'pyenv::user'

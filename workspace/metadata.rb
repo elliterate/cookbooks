@@ -1,4 +1,5 @@
 name 'workspace'
+depends 'apt'
 depends 'bash-it'
 depends 'pyenv'
 depends 'rbenv'
