@@ -1,13 +1,23 @@
 include_recipe 'workspace::volume'
 
-persistent_src_directory = ::File.join(node['workspace']['volume']['mount_point'], 'src')
+volume_options = node['workspace']['volume']
 
-directory persistent_src_directory do
-  owner node['workspace']['user']
-  recursive true
-end
+if volume_options
+  persistent_src_directory = ::File.join(volume_options['mount_point'], 'src')
 
-link node['workspace']['src_directory'] do
-  to persistent_src_directory
-  owner node['workspace']['user']
+  directory persistent_src_directory do
+    owner node['workspace']['user']
+    recursive true
+  end
+
+  link node['workspace']['src_directory'] do
+    to persistent_src_directory
+    owner node['workspace']['user']
+  end
+else
+  directory node['workspace']['src_directory'] do
+    owner node['workspace']['user']
+    mode 0755
+    recursive true
+  end
 end
