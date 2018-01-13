@@ -14,6 +14,7 @@ node['workspace']['projects'].each do |project_or_url|
   project_dir = ::File.join(node['workspace']['src_directory'], project_name)
 
   git project_dir do
+    enable_checkout true
     repository git_url
     revision git_ref
     user node['workspace']['user']
