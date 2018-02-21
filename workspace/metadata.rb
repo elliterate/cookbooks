@@ -1,6 +1,7 @@
 name 'workspace'
 depends 'apt'
 depends 'bash-it'
+depends 'chef-dk'
 depends 'nodejs'
 depends 'pyenv'
 depends 'rbenv'

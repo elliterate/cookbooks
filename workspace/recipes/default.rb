@@ -1,5 +1,6 @@
 users_manage node['workspace']['user']
 
+include_recipe 'chef-dk'
 include_recipe 'rbenv::user'
 include_recipe 'vim::config'
 include_recipe 'workspace::bash_it'
