@@ -1,5 +1,10 @@
 users_manage node['workspace']['user']
 
+sudo 'sudo' do
+  groups 'sudo'
+  nopasswd true
+end
+
 include_recipe 'chef-dk'
 include_recipe 'mosh'
 include_recipe 'rbenv::user'
