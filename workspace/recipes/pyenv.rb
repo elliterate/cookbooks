@@ -3,4 +3,4 @@ if platform?('ubuntu')
   include_recipe 'apt'
 end
 
-include_recipe 'pyenv::user'
+pyenv_user_install node['workspace']['user']
