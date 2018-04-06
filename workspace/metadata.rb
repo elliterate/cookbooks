@@ -1,7 +1,7 @@
 name 'workspace'
 depends 'apt'
 depends 'bash-it'
-depends 'chef-dk'
+depends 'chefdk'
 depends 'firefox'
 depends 'geckodriver'
 depends 'git'

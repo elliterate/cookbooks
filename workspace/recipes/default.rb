@@ -5,7 +5,7 @@ sudo 'sudo' do
   nopasswd true
 end
 
-include_recipe 'chef-dk'
+include_recipe 'chefdk'
 include_recipe 'mosh'
 include_recipe 'rbenv::user'
 include_recipe 'vim::config'
