@@ -7,6 +7,7 @@ end
 
 include_recipe 'chefdk'
 include_recipe 'mosh'
+include_recipe 'postgresql'
 include_recipe 'rbenv::user'
 include_recipe 'vim::config'
 include_recipe 'workspace::bash_it'
