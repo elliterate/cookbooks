@@ -1,1 +1,1 @@
-node.default['geckodriver']['version'] = 'v0.20.1'
+node.default['geckodriver']['version'] = 'v0.21.0'
