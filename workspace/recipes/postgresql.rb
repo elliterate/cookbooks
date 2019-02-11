@@ -19,3 +19,10 @@ postgresql_ident node['workspace']['user'] do
   system_user node['workspace']['user']
   pg_user node['workspace']['user']
 end
+
+case node['platform']
+when 'debian', 'ubuntu'
+  package 'libpq-dev'
+when 'darwin'
+  package 'libpq'
+end
